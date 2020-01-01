@@ -196,3 +196,8 @@ ul.genres li input[type='checkbox'] {
   -webkit-transform: translateX(25px);
   transform: translateX(25px);
 }
+
+.rating .input-range__label--max .input-range__label-container::after, 
+.rating .input-range__label--min .input-range__label-container::after {
+  content: ' \02b50';
+}

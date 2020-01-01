@@ -1,7 +1,6 @@
 {
   "name": "random-movie",
   "version": "0.1.0",
-  "private": true,
   "homepage": ".",
   "dependencies": {
     "lodash.debounce": "^4.0.8",
