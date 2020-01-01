@@ -1,0 +1,8 @@
+{
+  "eslint.workingDirectories": ["./client"],
+  "prettier.printWidth": 80,
+  "prettier.endOfLine": "lf",
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.singleQuote": true
+}
