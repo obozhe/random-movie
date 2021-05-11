@@ -9,21 +9,21 @@ export default class Main extends React.Component {
     super();
     this.state = {
       loadedMovie: null,
-      filters: null
+      filters: null,
     };
   }
 
   render() {
     return (
-      <div class="App">
+      <div className="App">
         <ParticleJS />
         <WeeksHot id="weeksHot" />
         <div id="main" className="main">
           <RandomButt
             filters={this.state.filters}
-            openMovie={movie => this.setState({ openFilmPage: movie })}
+            openMovie={(movie) => this.setState({ openFilmPage: movie })}
           />
-          <Filters setFilters={filters => this.setState({ filters })} />
+          <Filters setFilters={(filters) => this.setState({ filters })} />
         </div>
       </div>
     );

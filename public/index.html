@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="What to watch?" content="Find the best movie for you" />
+    <link rel="manifest" href="manifest.json" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -16,6 +17,23 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Что посмотреть?</title>
+    <script>
+      if (navigator.serviceWorker.controller) {
+        console.log(
+          '[PWA Builder] active service worker found, no need to register'
+        );
+      } else {
+        navigator.serviceWorker
+          .register('sw.js', {
+            scope: './',
+          })
+          .then(function (reg) {
+            console.log(
+              'Service worker has been registered for scope:' + reg.scope
+            );
+          });
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
