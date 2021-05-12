@@ -82,15 +82,11 @@ const genres = [
 const getMovie = (query = '', page = '') =>
   fetch(
     `https://api.themoviedb.org/3/discover/movie?api_key=${key}&${query}&page=${page}&language=ru&vote_count.gte=50`
-  )
-    .then((value) => value.json())
-    .catch(() => alert('Something went wrong'));
+  ).then((value) => value.json());
 
 const getWeeksHot = () =>
   fetch(
     `https://api.themoviedb.org/3/trending/movie/week?api_key=${key}&language=ru`
-  )
-    .then((value) => value.json())
-    .catch(() => alert('Something went wrong'));
+  ).then((value) => value.json());
 
 export { getWeeksHot, getMovie, genres };
