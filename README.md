@@ -2,8 +2,6 @@
 
 _Created with react.js_
 
-Run live demo [here](https://drednes.github.io/demo/whattowatch)
-
 # Installation instruction
 
 1. Install.
